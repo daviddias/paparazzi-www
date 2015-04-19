@@ -1,8 +1,18 @@
+<!doctype html>
+<html ng-app="paparrazi">
 <head>
     <link rel="stylesheet" href="/css/bundle.css"/>
+
 </head>
 <body>
-Hello world
+    <h1>Hello</h1>
 
-<script src="/js/bundle.js"></script>
+    <div ui-view></div>
+    <a ui-sref="state1">State 1</a>
+    <a ui-sref="state2">State 2</a>
+    
+    
+    <script src="/js/bundle.js"></script>
+
 </body>
+</html>

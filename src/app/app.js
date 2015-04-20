@@ -3,29 +3,25 @@ var angular = require('angular');
 var app = angular.module('paparrazi', [require('angular-ui-router')]);
 
 app.config(function($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('/state1');
+    $urlRouterProvider.otherwise('/404');
 
     $stateProvider
-        .state('state1', {
-            url: '/state1',
-            templateUrl: 'partials/state1.html'
+        .state('landing', {
+            url: '/',
+            templateUrl: 'partials/landing.html'
         })
-        .state('state1.list', {
-            url: '/list',
-            templateUrl: 'partials/state1.list.html',
+        .state('landing.contact-form', {
+            // url: '/list',
+            templateUrl: 'partials/landing.contact-form.html',
             controller: function($scope) {
-                $scope.items = ['A', 'List', 'Of', 'Items'];
+                //$scope.items = ['A', 'List', 'Of', 'Items'];
             }
         })
-        .state('state2', {
-            url: '/state2',
-            templateUrl: 'partials/state2.html'
-        })
-        .state('state2.list', {
-            url: '/list',
-            templateUrl: 'partials/state2.list.html',
+        .state('404', {
+            url: '/404',
+            templateUrl: 'partials/404.html',
             controller: function($scope) {
-                $scope.things = ['A', 'Set', 'Of', 'Things'];
+                //
             }
         });
 });

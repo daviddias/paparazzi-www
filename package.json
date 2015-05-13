@@ -8,7 +8,7 @@
     "serve": "./node_modules/.bin/static src/public",
     "mon": "./node_modules/.bin/nodemon --exec 'npm run sass && npm run browserify && npm run serve' --watch src/app --watch src/styles -e js,scss",
     "sass": "node_modules/.bin/node-sass src/styles/app.scss src/public/css/bundle.css",
-    "browserify": "node_modules/.bin/browserify --debug -e src/app/app.js -o src/public/js/bundle.js",
+    "browserify": "node_modules/.bin/browserify --debug -e src/app/index.js -o src/public/js/bundle.js",
     "codestyle": "./node_modules/.bin/jscs -x src/app tests",
     "lint": "./node_modules/.bin/jshint src/app",
     "test": "node ./node_modules/.bin/lab -r tap tests/test.js | ./node_modules/.bin/tap-spec",

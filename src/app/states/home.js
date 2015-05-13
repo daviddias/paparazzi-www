@@ -1,10 +1,6 @@
-var angular = require('angular');
+var controllers = require('./../controllers');
 
-var app = angular.module('razzi', [require('angular-ui-router')]);
-
-app.config(function($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('/404');
-
+module.exports = function($stateProvider, $urlRouterProvider) {
     $stateProvider
         .state('home', {
             url: '/',
@@ -34,9 +30,6 @@ app.config(function($stateProvider, $urlRouterProvider) {
             controller: function($scope) {
 
             }
-        })
-        .state('404', {
-            url: '/404',
-            templateUrl: 'partials/404.html'
         });
-});
+
+};

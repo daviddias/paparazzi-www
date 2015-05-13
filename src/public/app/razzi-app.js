@@ -5,7 +5,7 @@ angular.module('razzi', [
     'razzi.menu.home.form',
     '404',
 ])
-    .config(function ($stateProvider, $urlRouterProvider) {
+    .config(function($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('razzi', {
                 url: '',

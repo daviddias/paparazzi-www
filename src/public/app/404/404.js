@@ -1,6 +1,6 @@
 angular.module('404', [])
 
-    .config(function ($stateProvider) {
+    .config(function($stateProvider) {
         $stateProvider
             .state('404', {
                 url: '/404',
@@ -17,6 +17,6 @@ angular.module('404', [])
             });
     
     })
-    .controller('NotFoundCtrl', function NotFoundCtrl(){
+    .controller('NotFoundCtrl', function NotFoundCtrl() {
         console.log('Not Found');
     });

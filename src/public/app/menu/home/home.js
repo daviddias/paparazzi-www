@@ -1,7 +1,7 @@
 angular.module('razzi.menu.home', [
     'razzi.menu.home.form'
 ])
-    .config(function ($stateProvider) {
+    .config(function($stateProvider) {
         $stateProvider
             .state('razzi.menu.home', {
                 url: '/',
@@ -14,6 +14,6 @@ angular.module('razzi.menu.home', [
             })
         ;
     })
-    .controller('HomeCtrl', function ($stateParams) {
+    .controller('HomeCtrl', function($stateParams) {
         console.log('SPEAKING FROM HOME CONTROLLER')    
     });

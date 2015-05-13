@@ -3,7 +3,7 @@ angular.module('razzi.menu', [
   'razzi.menu.home.form'
 ])
 
-    .config(function ($stateProvider) {
+    .config(function($stateProvider) {
         $stateProvider
             .state('razzi.menu', {
                 url: '/',
@@ -20,6 +20,6 @@ angular.module('razzi.menu', [
             });
     
     })
-    .controller('MenuCtrl', function MenuCtrl(){
+    .controller('MenuCtrl', function MenuCtrl() {
         console.log('wohoo');
     });

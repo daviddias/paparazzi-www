@@ -1,6 +1,6 @@
 angular.module('razzi.menu.home.form', [])
 
-    .config(function ($stateProvider) {
+    .config(function($stateProvider) {
         $stateProvider
             .state('razzi.menu.home.form', {
                 url: '/',
@@ -9,6 +9,6 @@ angular.module('razzi.menu.home.form', [])
             })
         ;
     })
-    .controller('FormCtrl', function ($stateParams) {
+    .controller('FormCtrl', function($stateParams) {
         console.log('SPEAKING FROM FORM CONTROLLER');
     });

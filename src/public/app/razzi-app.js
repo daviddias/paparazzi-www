@@ -1,9 +1,6 @@
 angular.module('razzi', [
     'ui.router',
-    'razzi.menu',
-    'razzi.menu.home',
-    'razzi.menu.home.form',
-    '404',
+    'razzi.welcome'
 ])
     .config(function($stateProvider, $urlRouterProvider) {
         $stateProvider
@@ -13,5 +10,11 @@ angular.module('razzi', [
             })
         ;
 
-        $urlRouterProvider.otherwise('/404');
+        $urlRouterProvider.otherwise('/');
+    })
+    .run(function($rootScope) {
+        $rootScope.$on('$stateChangeStart', function(event, toState, toParams) {
+
+            console.log('TO:', toState, toParams);
+        });
     });

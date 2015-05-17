@@ -13,7 +13,7 @@ angular.module('razzi.welcome', [
             })
         ;
     })
-    .controller('WelcomeCtrl', function($scope, $stateParams, $timeout) {
+    .controller('WelcomeCtrl', function($scope, $state, $stateParams, $timeout) {
       
         var socket = io(http://localhost:3000);
 
@@ -24,14 +24,15 @@ angular.module('razzi.welcome', [
             $scope.waiting = true;
             console.log(url);  
 
-            //$timeout(function() {
-            //    $scope.waiting = false; 
-            //    $scope.received = true;
-            //},1000);
+            $http.get('http://localhost:9090/user/guest')
+                .success(function(data, status, headers, config) {
+                    // 2. register the token on the notification service 
+                    // 3. submit the url
+                    // 4. wait on socket.io to tell where the image is
+                })
+                .error(function(data, status, headers, config) {
+                    console.log('err: ' , status);
+                });
 
-            //1. get token
-            //2. register in websockets with the token
-            //3. submit the url 
-            //4. wait for it to get the image back
         }
     });

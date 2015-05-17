@@ -8,10 +8,26 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2 centered">
-                <h1>A whole new generation of recon.<br/>Be the first to know when it is ready.</h1>
+                <h1>A whole new generation of recon.</h1>
                 <div class="mtb">
 
-                    <div ui-view="homeplaceholder"></div>
+                    <form role="form" enctype="plain" ng-hide="waiting || received"> 
+                        <input type="url"ng-model="url" class="subscribe-input" 
+                            placeholder="Enter a url..." required>
+                        <button class='btn btn-conf btn-green' ng-click="submit(url)"
+                            type="submit">Look the little bird!</button>
+                    </form>
+
+                    <div ng-show="waiting">
+                        <h1>Just wait</h1> 
+                    </div>
+
+                    <div ng-show="received">
+                        <img src="https://cldup.com/JibeUxl1mJ.thumb.png"> </img>
+                    </div>
+
+
+
                     
                 </div><!--/mt-->
             </div>

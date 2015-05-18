@@ -13,9 +13,9 @@ angular.module('razzi.welcome', [
             })
         ;
     })
-    .controller('WelcomeCtrl', function($scope, $state, $stateParams, $timeout) {
+    .controller('WelcomeCtrl', function($scope, $http, $state, $stateParams, $timeout) {
       
-        var socket = io(http://localhost:3000);
+        //var socket = io('http://localhost:3000');
 
         $scope.waiting = false;
         $scope.received = false;
